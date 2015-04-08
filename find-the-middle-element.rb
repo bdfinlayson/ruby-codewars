@@ -16,11 +16,20 @@
 #My Solution
 
 def gimme(input_array)
-
+  #saves the input array to a new variable
+  arr = input_array
+  #sorts the array and saves the output to a variable
+  sortedArr = arr.sort
+  #finds and saves the index of the middle number
+  index = input_array.index(sortedArr[1])
+  #return the index of the middle number in the input_array
+  return index
 end
-
 
 #My Test Cases
 
 Test.assert_equals(gimme([2, 3, 1]), 0, 'Finds the index of middle element')
 Test.assert_equals(gimme([5, 10, 14]), 1, 'Finds the index of middle element')
+Test.assert_equals(gimme([10000,40,667]), 2, 'Finds the index of the middle element')
+Test.assert_equals(gimme([33.2, 336.9, 33321.6]), 1, 'Finds the middle float')
+Test.assert_equals(gimme(['a','x','m']), 2, 'Even finds the middle character')
