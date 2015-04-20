@@ -12,9 +12,18 @@ def find list, &block
   list.detect(&block) # detect passes each entry in enum to block and returns the first for which block is not false. If there are no matches, it calls ifnone (eg: detect(ifnone = nil) { |obj| block }, and returns the value of ifnone. Else it returns nil.
 end
 
+#Alternative solutions
+def find list, &block
+  list.find(&block)
+end
+
+
 
 #My Tests
 describe "find" do
   list = [0,1,2,3,5,8,13]
   Test.assert_equals(find(list){|item| item.odd?}, 1, "1 is the first item in the list that is odd")
 end
+
+
+
