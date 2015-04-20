@@ -9,7 +9,7 @@
 
 #My solution
 def find list, &block
-  # your solution here
+  list.detect(&block) # detect passes each entry in enum to block and returns the first for which block is not false. If there are no matches, it calls ifnone (eg: detect(ifnone = nil) { |obj| block }, and returns the value of ifnone. Else it returns nil.
 end
 
 
