@@ -17,4 +17,10 @@
 
 def wait_on_threads(threads)
 
+  threads.each { |x| x.join }
+
 end
+
+#For example, we can create a new thread separate from the main thread's execution using ::new.
+#Then we are able to pause the execution of the main thread and allow our new thread to finish, using join:
+#If we don't call thr.join before the main thread terminates, then all other threads including thr will be killed.
