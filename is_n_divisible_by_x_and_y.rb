@@ -32,3 +32,13 @@ Test.assert_equals(is_divisible(12,3,4),true)
 Test.assert_equals(is_divisible(8,3,4),false)
 Test.assert_equals(is_divisible(48,3,4),true)
 Test.assert_equals(is_divisible(198,2,12), false)
+
+
+
+############
+# Alternative Solution
+# ##########
+
+def is_divisible(n,x,y)
+  (n % x == 0) && (n % y == 0)
+end
